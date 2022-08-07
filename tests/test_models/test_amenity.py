@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 """
-Test suits for amenities
+Unittest for amenity.py
 """
-import os
-import models
 import unittest
-from datetime import datetime
 from models.amenity import Amenity
+import datetime
 
 
 class TestAmenity(unittest.TestCase):
@@ -36,6 +34,7 @@ class TestAmenity(unittest.TestCase):
         self.assertIsInstance(self.a.id, str)
         self.assertIsInstance(self.a.created_at, datetime.datetime)
         self.assertIsInstance(self.a.updated_at, datetime.datetime)
+
 
 if __name__ == '__main__':
     unittest.main()

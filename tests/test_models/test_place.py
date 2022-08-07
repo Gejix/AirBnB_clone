@@ -1,19 +1,14 @@
 #!/usr/bin/python3
 """
-Test suits for places
+Unittest for amenity.py
 """
-
-import os
-import models
 import unittest
-from datetime import datetime
 from models.place import Place
+import datetime
 
 
 class TestPlace(unittest.TestCase):
-    """
-    Tests for amenities
-    """
+    """Tests instances and methods from amenity class"""
 
     p = Place()
 
@@ -58,6 +53,7 @@ class TestPlace(unittest.TestCase):
         self.assertIsInstance(self.p.id, str)
         self.assertIsInstance(self.p.created_at, datetime.datetime)
         self.assertIsInstance(self.p.updated_at, datetime.datetime)
+
 
 if __name__ == '__main__':
     unittest.main()

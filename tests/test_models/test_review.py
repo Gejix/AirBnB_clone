@@ -1,18 +1,14 @@
 #!/usr/bin/python3
 """
-Test suits for amenities
+Unittest for review.py
 """
-import os
-import models
 import unittest
-from datetime import datetime
 from models.review import Review
+import datetime
 
 
 class TestReview(unittest.TestCase):
-    """
-    Tests for amenities
-    """
+    """Tests instances and methods from Review class"""
 
     r = Review()
 
@@ -42,6 +38,3 @@ class TestReview(unittest.TestCase):
         self.assertIsInstance(self.r.id, str)
         self.assertIsInstance(self.r.created_at, datetime.datetime)
         self.assertIsInstance(self.r.updated_at, datetime.datetime)
-
-if __name__ == '__main__':
-    unittest.main()

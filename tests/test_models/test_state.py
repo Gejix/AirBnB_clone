@@ -1,18 +1,14 @@
 #!/usr/bin/python3
 """
-Test suits for amenities
+Unittest for amenity.py
 """
-import os
-import models
 import unittest
-from datetime import datetime
 from models.state import State
+import datetime
 
 
 class TestState(unittest.TestCase):
-    """
-    Tests for amenities
-    """
+    """ Tests instances and methods from State class """
 
     s = State()
 
@@ -38,6 +34,7 @@ class TestState(unittest.TestCase):
         self.assertIsInstance(self.s.id, str)
         self.assertIsInstance(self.s.created_at, datetime.datetime)
         self.assertIsInstance(self.s.updated_at, datetime.datetime)
+
 
 if __name__ == '__main__':
     unittest.main()

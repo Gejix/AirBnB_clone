@@ -1,18 +1,14 @@
 #!/usr/bin/python3
 """
-Test suits for amenities
+Unittest for user.py
 """
-import os
-import models
 import unittest
-from datetime import datetime
 from models.user import User
+import datetime
 
 
-class TestUser(unittest.TestCase):
-    """
-    Tests for amenities
-    """
+class UserCase(unittest.TestCase):
+    """Tests instances and methods from user class"""
 
     u = User()
 
@@ -43,6 +39,7 @@ class TestUser(unittest.TestCase):
         self.assertIsInstance(self.u.id, str)
         self.assertIsInstance(self.u.created_at, datetime.datetime)
         self.assertIsInstance(self.u.updated_at, datetime.datetime)
+
 
 if __name__ == '__main__':
     unittest.main()
